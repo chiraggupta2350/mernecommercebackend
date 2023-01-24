@@ -22,10 +22,12 @@ const user = require('./routes/userRoute');
 const order = require('./routes/orderRoute');
 const payment = require('./routes/paymentRoute');
 
-app.use(cors({
-	origin: process.env.FRONTEND_URL,
-	credentials: true
-}));
+// app.use(cors({
+// 	origin: process.env.FRONTEND_URL,
+// 	credentials: true
+// }));
+
+app.use(cors({ origin: "*" }));
 
 
 app.options("*", cors());
